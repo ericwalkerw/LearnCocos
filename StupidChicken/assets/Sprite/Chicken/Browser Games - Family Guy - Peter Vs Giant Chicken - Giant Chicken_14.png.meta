@@ -1,0 +1,34 @@
+{
+  "ver": "2.3.3",
+  "uuid": "c6981b2f-1c8e-4843-8207-f194c61bde8a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
+  "subMetas": {
+    "Browser Games - Family Guy - Peter Vs Giant Chicken - Giant Chicken_14": {
+      "ver": "1.0.4",
+      "uuid": "48a6ffe6-3f9d-4911-b032-10bb88fefbc0",
+      "rawTextureUuid": "c6981b2f-1c8e-4843-8207-f194c61bde8a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 57,
+      "height": 47,
+      "rawWidth": 57,
+      "rawHeight": 47,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
