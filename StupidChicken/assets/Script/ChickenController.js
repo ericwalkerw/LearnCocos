@@ -15,6 +15,7 @@ cc.Class({
         _cooldownTimer : 0,
         mTrafficLight:cc.Node,
         anim:cc.Animation,
+        sound:cc.AudioSource
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -31,6 +32,7 @@ cc.Class({
                 this.anim.play("Walk");
             }
             if(this._cooldownTimer <= 4.5){
+                this.sound.play();
                 this._cooldownTimer += dt;
                 this.node.x += dt*50;
             }

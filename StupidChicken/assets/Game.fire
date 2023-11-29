@@ -26,7 +26,7 @@
         "__id__": 29
       },
       {
-        "__id__": 33
+        "__id__": 34
       }
     ],
     "_active": true,
@@ -1222,6 +1222,9 @@
       },
       {
         "__id__": 32
+      },
+      {
+        "__id__": 33
       }
     ],
     "_prefab": null,
@@ -1333,7 +1336,28 @@
     "anim": {
       "__id__": 31
     },
+    "sound": {
+      "__id__": 33
+    },
     "_id": "8dqaMNditNOZH8rgLwyF2B"
+  },
+  {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 29
+    },
+    "_enabled": true,
+    "_clip": {
+      "__uuid__": "3b3bce38-5434-4815-9ab5-2bfa4aba27f3"
+    },
+    "_volume": 1,
+    "_mute": false,
+    "_loop": false,
+    "playOnLoad": false,
+    "preload": false,
+    "_id": "a7lqEuHidG5ZPGlF0AgWS1"
   },
   {
     "__type__": "cc.Node",
@@ -1347,10 +1371,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 34
+        "__id__": 35
       },
       {
-        "__id__": 35
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1401,7 +1425,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 34
     },
     "_enabled": true,
     "_materials": [
@@ -1433,7 +1457,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 34
     },
     "_enabled": true,
     "_cooldownTimer": 0,
