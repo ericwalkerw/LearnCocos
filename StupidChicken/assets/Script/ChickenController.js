@@ -8,41 +8,30 @@
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
+const u = require("utilities");
 cc.Class({
-    extends: cc.Component,
+  extends: cc.Component,
 
-    properties: {
-        _cooldownTimer : 0,
-        mTrafficLight:cc.Node,
-        anim:cc.Animation,
-        sound:cc.AudioSource
-    },
+  properties: {
+    _cooldownTimer: 0,
+    target:490,
+    mTrafficLight: cc.Node,
+    anim: cc.Animation,
+    sound: cc.AudioSource,
+  },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
-    start () {
-    },
-
-    update (dt) {
-        const trafficLight = this.mTrafficLight.getComponent('LightController');
-        if(trafficLight.canMove){
-            if(this._cooldownTimer <= 0.1){
-                this.anim.play("Walk");
-            }
-            if(this._cooldownTimer <= 4.5){
-                this.sound.play();
-                this._cooldownTimer += dt;
-                this.node.x += dt*50;
-            }
-            else if(this._cooldownTimer >= 4.5){
-                this.anim.stop("Walk");
-                this.node.angle -=4;
-                this.node.x+=2;
-                this.node.y+=2;
-                this.node.color = cc.color(136,136,136,255);
-            }
-        }
-    },
+  update(dt) {
+    const trafficLight = u.getS(this.mTrafficLight, "LightController");
+    if (trafficLight.canMove) {
+      this._cooldownTimer += dt;
+      if (this._cooldownTimer <= 0.05) {this.anim.play("Walk");}
+      this.node.x += u.moveToTarget(this.node.x, this.target, dt);
+      if(this._cooldownTimer >= 1.6 && this.node.angle <= 1000){
+        this.anim.stop();
+        this.node.angle += 4;
+        this.node.x +=4;
+        this.node.y +=4;
+      }
+    }
+  },
 });
