@@ -24,14 +24,15 @@ cc.Class({
     const trafficLight = u.getS(this.mTrafficLight, "LightController");
     if (trafficLight.canMove) {
       this._cooldownTimer += dt;
-      if (this._cooldownTimer <= 0.05) {this.anim.play("Walk");}
-      this.node.x += u.moveToTarget(this.node.x, this.target, dt);
-      if(this._cooldownTimer >= 1.6 && this.node.angle <= 1000){
-        this.anim.stop();
-        this.node.angle += 4;
-        this.node.x +=4;
-        this.node.y +=4;
-      }
+      this.move(dt);
     }
   },
+  move(dt){
+    if (this._cooldownTimer <= 0.05) {this.anim.play("Walk");}
+    this.node.x += u.moveToTarget(this.node.x, this.target, dt);
+  },
+  die(){
+    this.anim.stop();
+    this.sound.play();
+  }
 });

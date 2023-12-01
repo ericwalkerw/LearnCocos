@@ -30,6 +30,9 @@
       },
       {
         "__id__": 46
+      },
+      {
+        "__id__": 50
       }
     ],
     "_active": true,
@@ -1551,7 +1554,7 @@
     },
     "_enabled": true,
     "_cooldownTimer": 0,
-    "target": 490.1,
+    "target": 550,
     "mTrafficLight": {
       "__id__": 8
     },
@@ -1711,5 +1714,80 @@
     },
     "fileId": "0eCO9jLyFDqroUt6Zq+kN6",
     "sync": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Manager",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 1,
+    "_components": [
+      {
+        "__id__": 51
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": "a62TG+SB5Oy4LmA0nNoAf4"
+  },
+  {
+    "__type__": "370f7A2hmRKDpb3GUWQfuiV",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 50
+    },
+    "_enabled": true,
+    "car": {
+      "__id__": 46
+    },
+    "chicken": {
+      "__id__": 40
+    },
+    "isDone": false,
+    "_id": "a0bJXo/zdOrLQHea3jYX1H"
   }
 ]
