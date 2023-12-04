@@ -8,7 +8,7 @@
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
-const { randomWords } = require("randomText.js");
+const { randomWords } = require("randomText");
 
 cc.Class({
   extends: cc.Component,
