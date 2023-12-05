@@ -39,9 +39,9 @@ cc.Class({
     _accuracy: 0,
 
     isDone: false,
-    _words:[],
-    paragraph:"x",
-    isStart:false,
+    _words: [],
+    paragraph: "x",
+    isStart: false,
   },
 
   start() {
@@ -50,8 +50,8 @@ cc.Class({
 
   generateWords() {
     randomWords(40, (value) => {
-        this._words = (JSON.parse(value)).join(" ");
-        this.textRender.string = this._words;
+      this._words = JSON.parse(value).join(" ");
+      this.textRender.string = this._words;
     });
   },
 
@@ -60,11 +60,11 @@ cc.Class({
       this._cooldown -= dt;
       this.updateTimerDisplay(dt);
       this.updateTimerColor();
-    } else if(this._cooldown <= 0) {
+      this.textInput.focus();
+    } else if (this._cooldown <= 0) {
       this.isDone = true;
       this.resultDisplay();
     }
-    this.textInput.focus();
   },
   updateTimerDisplay(dt) {
     this.timer.fillRange += dt / 60;
